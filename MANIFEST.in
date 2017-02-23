@@ -1,0 +1,3 @@
+graft dotateams/templates
+graft dotateams/static
+include dotateams/schema.sql

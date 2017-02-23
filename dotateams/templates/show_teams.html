@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-team>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=teams>
+  {% for team in teams %}
+    <li><h2>{{ team.title }}</h2>{{ team.description|safe }}
+  {% else %}
+    <li><em>Unbelievable.  Nothing here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

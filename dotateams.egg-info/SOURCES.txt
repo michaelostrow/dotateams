@@ -1,0 +1,13 @@
+MANIFEST.in
+dotateams/__init__.py
+dotateams/dotateams.py
+dotateams/schema.sql
+dotateams.egg-info/PKG-INFO
+dotateams.egg-info/SOURCES.txt
+dotateams.egg-info/dependency_links.txt
+dotateams.egg-info/requires.txt
+dotateams.egg-info/top_level.txt
+dotateams/static/style.css
+dotateams/templates/layout.html
+dotateams/templates/login.html
+dotateams/templates/show_teams.html

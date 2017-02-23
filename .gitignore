@@ -1,0 +1,9 @@
+# Virtualenv
+.Python
+bin
+lib
+include
+*.py[cod]
+dotateams/*.py
+dotateams/*.db
+.eggs/
