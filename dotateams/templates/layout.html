@@ -2,12 +2,15 @@
 <title>Dota 2 Teams</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 <div class=page>
-  <h1>Dota 2 Teams</h1>
+  <h1><a href="{{ url_for('show_teams') }}">Dota 2 Teams</a></h1>
   <div class=metanav>
-  {% if not session.logged_in %}
-    <a href="{{ url_for('login') }}">log in</a>
+  {% if session.logged_in %}
+    <a href="{{ url_for('profile', username=session.username) }}">{{session.username}}</a>
+    <a href="{{ url_for('add_team') }}">Create new team</a>
+    <a href="{{ url_for('logout') }}">Log out</a>
   {% else %}
-    <a href="{{ url_for('logout') }}">log out</a>
+    <a href="{{ url_for('signup') }}">Sign up</a>
+    <a href="{{ url_for('login') }}">Log in</a>
   {% endif %}
   </div>
   {% for message in get_flashed_messages() %}

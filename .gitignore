@@ -7,3 +7,4 @@ include
 dotateams/*.py
 dotateams/*.db
 .eggs/
+*.egg-info

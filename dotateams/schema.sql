@@ -12,6 +12,7 @@ create table team (
 	id integer primary key autoincrement,
 	user integer not null,
 	title text not null,
+	created_at datetime default current_timestamp,
 	hero1 text,
 	hero2 text,
 	hero3 text,
@@ -27,5 +28,7 @@ create table team (
 	counter2 text,
 	counter3 text,
 	other_counters text,
-	foreign key(user) references user(id)
+	thumbsups integer default 0,
+	foreign key(user) references user(id),
+	constraint unique_title unique(title)
 );
